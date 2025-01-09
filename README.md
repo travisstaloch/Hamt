@@ -1,7 +1,8 @@
+:warning: This is an experimental library which may be slow or have bugs.  For small key sets `std.StaticStringMap()` or `std.HashMap()` is likely faster :warning:
+
 # About
 
-A generic [HAMT](https://en.wikipedia.org/wiki/Hash_array_mapped_trie) implementation in zig.  
-
+A generic [HAMT](https://en.wikipedia.org/wiki/Hash_array_mapped_trie) implementation in zig.
 
 * runtime API following `std.ArrayHashMap(K, V)`
   * `get(key)`, `getOrPut(allocator, key)`, `put(allocator, key, value)`, `init(allocator, kvs)`, `initContext(allocator, kvs, ctx)`
@@ -12,7 +13,7 @@ A generic [HAMT](https://en.wikipedia.org/wiki/Hash_array_mapped_trie) implement
   * `initComptime(kvs)`, `putComptime(key, value)`
 
 # Notes
-Branch nodes use custom ArrayLinkedList to save memory.
+Branch nodes use custom [ArrayLinkedList](src/array-linked-list.zig) to save memory.
 
 # Bench
 see [bench.sh](bench.sh) and [src/bench.zig](src/bench.zig)

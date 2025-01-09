@@ -3,7 +3,7 @@ const mem = std.mem;
 const Allocator = mem.Allocator;
 const assert = std.debug.assert;
 
-const ll = @import("linked-list.zig");
+const ll = @import("array-linked-list.zig");
 
 pub const Options = struct {
     max_collisions: u8 = 8,

@@ -23,7 +23,7 @@ pub fn build(b: *std.Build) !void {
 
     const tests_ll = b.addTest(.{
         .name = "test-ll",
-        .root_source_file = b.path("src/linked-list.zig"),
+        .root_source_file = b.path("src/array-linked-list.zig"),
         .target = target,
         .optimize = optimize,
     });
